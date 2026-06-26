@@ -13,8 +13,8 @@ Tahapan analisis yang dilakukan meliputi:
 5. *Data construction*
 6. Pemodelan menggunakan beberapa algoritma klasifikasi
 7. *Hyperparameter tuning*
-8. Evaluasi model
-9. Interpretasi hasil menggunakan *feature importance* dan SHAP
+8. Interpretasi hasil menggunakan *feature importance* dan SHAP
+9. Evaluasi model
 
 Model yang dibandingkan dalam project ini adalah:
 
@@ -218,6 +218,18 @@ Setiap model diuji dalam dua skenario:
 - Model setelah *hyperparameter tuning*
 
 Hyperparameter tuning dilakukan menggunakan **GridSearchCV** dengan validasi silang 5-fold.
+## Interpretasi Feature Importance
+
+Berdasarkan hasil *feature importance* dan SHAP, variabel yang paling berpengaruh dalam klasifikasi penyakit genetik adalah:
+
+1. `Sickled_RBC_Percent`
+2. `Fetal_Hemoglobin`
+3. `Sweat_Chloride`
+4. `BRCA1_Expression`
+5. `IL6_Level`
+6. `Serum_Ferritin`
+
+Variabel `Sickled_RBC_Percent` menjadi fitur dengan kontribusi paling besar terhadap hasil prediksi model. Hal ini menunjukkan bahwa karakteristik hematologis dan biomarker biologis memiliki peran penting dalam membedakan kategori penyakit genetik pada dataset yang digunakan.
 
 ## Ringkasan Hasil
 
@@ -245,19 +257,6 @@ Parameter terbaik XGBoost berdasarkan hasil tuning:
     "subsample": 0.9
 }
 ```
-
-## Interpretasi Feature Importance
-
-Berdasarkan hasil *feature importance* dan SHAP, variabel yang paling berpengaruh dalam klasifikasi penyakit genetik adalah:
-
-1. `Sickled_RBC_Percent`
-2. `Fetal_Hemoglobin`
-3. `Sweat_Chloride`
-4. `BRCA1_Expression`
-5. `IL6_Level`
-6. `Serum_Ferritin`
-
-Variabel `Sickled_RBC_Percent` menjadi fitur dengan kontribusi paling besar terhadap hasil prediksi model. Hal ini menunjukkan bahwa karakteristik hematologis dan biomarker biologis memiliki peran penting dalam membedakan kategori penyakit genetik pada dataset yang digunakan.
 
 ## Kesimpulan
 
