@@ -66,7 +66,6 @@ Fitur yang digunakan dalam pemodelan:
 
 Target klasifikasi adalah `Disease`, yaitu kategori penyakit genetik yang dikodekan dalam lima kelas.
 
-> Catatan: link Kaggle tidak tercantum pada file laporan atau notebook yang diberikan, sehingga bagian ini mencantumkan sumber dataset sesuai keterangan pada makalah, yaitu Kaggle.
 
 ## Struktur File
 
